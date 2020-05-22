@@ -6,12 +6,10 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
-public interface IBookService {
-    void saveBookData();
-    List<Book> getAllBooks();
+public interface ICustomerBookService {
+
+    Page<Book> getAllBooks(Pageable pageable);
     List<Book> searchBooks(String searchKey);
     Page<Book> sortBooksByPriceAsc(Pageable pageable);
-
-    Page<Book> fetchBooks(Pageable pageable);
 
 }
